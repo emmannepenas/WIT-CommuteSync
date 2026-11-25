@@ -9,8 +9,8 @@ import FacultyView from './components/FacultyView';
 import AdminView from './components/AdminView';
 import AuthView from './components/AuthView';
 
-const API_URL = 'http://localhost:5000/api';
-const socket = io('http://localhost:5000');
+const API_URL = process.env.REACT_APP_API_URL || '[https://wit-commutesync-1.onrender.com/api](https://wit-commutesync-1.onrender.com/api)';
+const socket = io(process.env.REACT_APP_SOCKET_URL || '[https://wit-commutesync-1.onrender.com](https://wit-commutesync-1.onrender.com)');
 
 function App() {
   const [activeTab, setActiveTab] = useState('student');

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import RouteMap from './RouteMap';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = process.env.REACT_APP_API_URL || '[https://wit-commutesync-1.onrender.com/api](https://wit-commutesync-1.onrender.com/api)';
 
 const StudentView = ({ terminals = [], incidents = [], weather = {} }) => {
   const [selectedMunicipality, setSelectedMunicipality] = useState('Pavia');
